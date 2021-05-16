@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/UI"
+    android:background="@color/purple_200"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtJudul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Form Biodata"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/txtNama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/nama"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txtJudul" />
+
+    <TextView
+        android:id="@+id/txtPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/password"
+        android:textSize="20sp"
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNama"
+        />
+
+    <TextView
+        android:id="@+id/txtGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/gender"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPass" />
+
+    <TextView
+        android:id="@+id/txtPekerjaan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/pekerjaan"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtGender" />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editNama"
+        android:layout_marginTop="44dp"
+        app:layout_constraintTop_toTopOf="@id/txtJudul"
+        app:layout_constraintStart_toEndOf="@+id/txtNama"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/editPass"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+
+        app:layout_constraintTop_toBottomOf="@+id/editNama"
+        app:layout_constraintStart_toEndOf="@+id/txtPass"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        />
+
+    <RadioGroup
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/editPass"
+        app:layout_constraintStart_toEndOf="@+id/txtGender"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:orientation="horizontal"
+        android:id="@+id/radioGroup">
+
+        <RadioButton
+            android:id="@+id/rbPria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/pria"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:text="@string/wanita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbWanita"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+    </RadioGroup>
+
+    <CheckBox
+        android:text="@string/dosen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/cbDosen"
+        app:layout_constraintStart_toEndOf="@+id/txtPekerjaan"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="24dp"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+    <CheckBox
+        android:text="@string/mahasiswa"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/cbMahasiswa"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/cbDosen"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintStart_toEndOf="@+id/txtPekerjaan"
+        android:layout_marginStart="24dp"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+    <CheckBox
+        android:text="@string/lainnya"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/cbLainnya"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/cbMahasiswa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtPekerjaan"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_delete"
+        android:id="@+id/imgButtonCancel"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/cbLainnya"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="24dp"/>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:id="@+id/imgButtonAdd"
+        app:layout_constraintEnd_toStartOf="@+id/imgButtonCancel"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/cbLainnya"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

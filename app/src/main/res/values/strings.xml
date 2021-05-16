@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">UI Component</string>
+    <string name="nama">Nama:</string>
+    <string name="password">Password:</string>
+    <string name="gender">Gender:</string>
+    <string name="pekerjaan">Pekerjaan:</string>
+    <string name="pria">Pria</string>
+    <string name="wanita">Wanita</string>
+    <string name="dosen">Dosen</string>
+    <string name="mahasiswa">Mahasiswa</string>
+    <string name="lainnya">Lainnya</string>
+
+</resources>
